@@ -1,0 +1,41 @@
+<view class="wrap">
+  <view class="kicker">A股复盘 · 双策略研究</view>
+  <view class="title">复盘札记</view>
+  <view class="sub">2026年9月30日 · 给10月8日用
+医药研发 · 锂电材料 · 地产修复</view>
+  <view class="box">
+    <view class="h2">核心结论</view>
+    <view>1. 复盘日9月30日，策略日10月8日。节中没有新成交。</view>
+    <view>2. 第2阶段轮动分歧，低仓确认。</view>
+    <view>3. 医药、锂电、地产是方向。机器人只算辅助。</view>
+    <view>4. 江淮、芒果继续观察。PCB等重新转强。</view>
+    <view>5. 基础0到1成。单只半成，确认后最多2成。</view>
+  </view>
+  <view class="box">
+    <view class="h2">市场情绪</view>
+    <view>弱修复里的轮动分歧。不能用新华传媒7板代表全面回暖。</view>
+    <view class="meta">上证+0.31%，下跌家数仍多。涨停56，炸板率18.75%，1进2约13%。</view>
+  </view>
+  <scroll-view scroll-x class="tags">
+    <view class="tag {{line=='all'?'on':''}}" data-line="all" bindtap="setLine">全部</view>
+    <view class="tag {{line=='医药'?'on':''}}" data-line="医药" bindtap="setLine">医药</view>
+    <view class="tag {{line=='锂电'?'on':''}}" data-line="锂电" bindtap="setLine">锂电</view>
+    <view class="tag {{line=='地产'?'on':''}}" data-line="地产" bindtap="setLine">地产</view>
+    <view class="tag {{line=='辅助'?'on':''}}" data-line="辅助" bindtap="setLine">辅助观察</view>
+  </scroll-view>
+  <view class="box">
+    <view class="h2">方向和核心票</view>
+    <view class="card" wx:for="{{cores}}" wx:key="code" data-code="{{item.code}}" bindtap="open">
+      <view class="role">{{item.line}} · {{item.role}}</view>
+      <view class="name">{{item.name}} {{item.code}}</view>
+      <view>{{item.do}}</view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="h2">查你自己的票</view>
+    <view class="note">持仓不同就搜。在札记里的用昨天的条件。不在札记里的，不另开主线。</view>
+    <input class="q" placeholder="代码或名称" bindinput="onSearch" value="{{q}}"/>
+    <view class="hit" wx:for="{{hits}}" wx:key="code" data-code="{{item.code}}" bindtap="open">{{item.name}} {{item.code}} · {{item.chg}} · {{item.role}}</view>
+  </view>
+  <view class="note pad">研究复盘，不是下单指令。新买入当天不能卖。</view>
+</view>

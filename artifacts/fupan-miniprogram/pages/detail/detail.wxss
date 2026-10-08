@@ -1,0 +1,6 @@
+.pos{display:flex;gap:12rpx;margin:20rpx 0}
+.tag{padding:12rpx 22rpx;border:1rpx solid #e4ddd0;border-radius:999rpx;background:#fff}
+.tag.on{background:#1c1915;color:#fff}
+.step{margin:16rpx 0}
+.b{font-weight:600}
+.title{font-size:44rpx;font-weight:600}

@@ -1,0 +1,9 @@
+page{background:#f4f1ea;color:#1c1915;font-size:32rpx;line-height:1.55}
+.box{background:#fffcf7;border:1rpx solid #e4ddd0;border-radius:24rpx;padding:28rpx;margin:20rpx 24rpx}
+.kicker{font-size:22rpx;letter-spacing:4rpx;color:#6e675c}
+.title{font-size:56rpx;font-weight:600;margin:8rpx 0}
+.sub{color:#6e675c;font-size:26rpx}
+.h2{font-size:32rpx;font-weight:600;margin-bottom:12rpx}
+.meta{color:#6e675c;font-size:24rpx}
+.role{color:#8c3a2f;font-size:24rpx}
+.note{color:#6e675c;font-size:24rpx}

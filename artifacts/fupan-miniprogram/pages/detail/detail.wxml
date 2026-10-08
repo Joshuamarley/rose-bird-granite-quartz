@@ -1,0 +1,14 @@
+<view class="box" wx:if="{{ready}}">
+  <view class="role">{{role}}</view>
+  <view class="title">{{name}}</view>
+  <view class="meta">{{code}} · 9月30日 {{price}} 元 · {{chg}} · 成交 {{amt}} 亿</view>
+  <view class="pos">
+    <view class="tag {{posture=='empty'?'on':''}}" data-p="empty" bindtap="setP">空仓</view>
+    <view class="tag {{posture=='watch'?'on':''}}" data-p="watch" bindtap="setP">关注</view>
+    <view class="tag {{posture=='hold'?'on':''}}" data-p="hold" bindtap="setP">已持有</view>
+  </view>
+  <view class="step"><text class="b">现在只做一件事。 </text>{{first}}</view>
+  <view class="step"><text class="b">不要做。 </text>{{dont}}</view>
+  <view class="step"><text class="b">仓位。 </text>{{budget}}</view>
+  <view class="note">研究复盘，不是下单指令。新买入当天不能卖。</view>
+</view>
